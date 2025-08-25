@@ -5,9 +5,9 @@
 
 ////// Possible options
 
-// #define Shorten
+#define Shorten
 // #define HodgkinHuxley
-#define HodgkinHuxlexRazumova
+//#define HodgkinHuxlexRazumova
 
 // #define FiberDiffusionSolver TimeSteppingScheme::ImplicitEuler
 // #define FiberDiffusionSolver TimeSteppingScheme::CrankNicolson
@@ -19,8 +19,8 @@ using FiberDiffusionSolver = TimeSteppingScheme::ImplicitEuler<T>;
 ////// ^^^^^^^^^^^^^^^^
 
 #ifdef Shorten
-#define N_STATES 57
-#define N_ALGEBRAICS 1
+#define N_STATES 56
+#define N_ALGEBRAICS 71
 #endif
 #ifdef HodgkinHuxley
 #define N_STATES 4
