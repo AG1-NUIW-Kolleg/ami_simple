@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<VTKFile type="UnstructuredGrid" version="0.1" byte_order="LittleEndian">
+   <UnstructuredGrid>
+      <Piece NumberOfPoints="25" NumberOfCells="0" > 
+         <Points> 
+            <DataArray type="Float64" Name="Position" NumberOfComponents="3" format="ascii"> 
+               0  0  20  
+               0.75  0  20  
+               1.5  0  20  
+               2.25  0  20  
+               3  0  20  
+               0  0.75  20  
+               0.75  0.75  20  
+               1.5  0.75  20  
+               2.25  0.75  20  
+               3  0.75  20  
+               0  1.5  20  
+               0.75  1.5  20  
+               1.5  1.5  20  
+               2.25  1.5  20  
+               3  1.5  20  
+               0  2.25  20  
+               0.75  2.25  20  
+               1.5  2.25  20  
+               2.25  2.25  20  
+               3  2.25  20  
+               0  3  20  
+               0.75  3  20  
+               1.5  3  20  
+               2.25  3  20  
+               3  3  20  
+            </DataArray>
+         </Points> 
+
+         <Cells>
+            <DataArray type="Int32" Name="connectivity" NumberOfComponents="1" format="ascii">
+               
+            </DataArray> 
+            <DataArray type="Int32" Name="offsets" NumberOfComponents="1" format="ascii">
+               
+            </DataArray>
+            <DataArray type="UInt8"  Name="types" NumberOfComponents="1" format="ascii">
+               
+            </DataArray>
+         </Cells>
+         <PointData Scalars="Rank " Vectors="Displacement Velocity Traction ">
+            <DataArray type="UInt32" Name="Rank" NumberOfComponents="1" format="ascii">
+               0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+            </DataArray>
+            <DataArray type="Float64" Name="Displacement" NumberOfComponents="3" format="ascii">
+               0 0 0  0 0 0  0 0 0  0 0 0  0 0 0  0 0 0  0 0 0  0 0 0  0 0 0  0 0 0  0 0 0  0 0 0  0 0 0  0 0 0  0 0 0  0 0 0  0 0 0  0 0 0  0 0 0  0 0 0  0 0 0  0 0 0  0 0 0  0 0 0  0 0 0  
+            </DataArray>
+            <DataArray type="Float64" Name="Velocity" NumberOfComponents="3" format="ascii">
+               0 0 0  0 0 0  0 0 0  0 0 0  0 0 0  0 0 0  0 0 0  0 0 0  0 0 0  0 0 0  0 0 0  0 0 0  0 0 0  0 0 0  0 0 0  0 0 0  0 0 0  0 0 0  0 0 0  0 0 0  0 0 0  0 0 0  0 0 0  0 0 0  0 0 0  
+            </DataArray>
+            <DataArray type="Float64" Name="Traction" NumberOfComponents="3" format="ascii">
+               -4.8089e-07 -4.89898e-07 1.52914e-06  -1.36035e-07 -8.31168e-07 1.52914e-06  1.02291e-07 -1.16474e-06 1.52914e-06  1.29301e-07 -7.92076e-07 1.52914e-06  4.71703e-07 -5.33237e-07 1.52914e-06  -8.33228e-07 -1.43406e-07 1.52914e-06  -3.30667e-07 -3.28176e-07 1.52914e-06  2.29651e-07 -5.47881e-07 1.52914e-06  3.20068e-07 -3.18981e-07 1.52914e-06  7.85497e-07 -1.74303e-07 1.52914e-06  -1.17268e-06 1.02211e-07 1.52914e-06  -5.53881e-07 2.29092e-07 1.52914e-06  3.18875e-07 3.17259e-07 1.52914e-06  5.4932e-07 1.86354e-07 1.52914e-06  1.17549e-06 5.83263e-08 1.52914e-06  -7.93589e-07 1.31109e-07 1.52914e-06  -3.2017e-07 3.1846e-07 1.52914e-06  1.85528e-07 5.45378e-07 1.52914e-06  3.22499e-07 3.2487e-07 1.52914e-06  8.29624e-07 1.30774e-07 1.52914e-06  -5.25522e-07 4.75179e-07 1.52914e-06  -1.66297e-07 7.83643e-07 1.52914e-06  7.41702e-08 1.16781e-06 1.52914e-06  1.55812e-07 8.3478e-07 1.52914e-06  4.88978e-07 4.69308e-07 1.52914e-06  
+            </DataArray>
+         </PointData> 
+      </Piece>
+   </UnstructuredGrid> 
+</VTKFile>

@@ -5,7 +5,8 @@
 
 ////// Possible options
 
-#define Shorten
+#define Kolleg
+// #define Shorten
 // #define HodgkinHuxley
 //#define HodgkinHuxlexRazumova
 
@@ -18,6 +19,10 @@ using FiberDiffusionSolver = TimeSteppingScheme::ImplicitEuler<T>;
 
 ////// ^^^^^^^^^^^^^^^^
 
+#ifdef Kolleg
+#define N_STATES 1
+#define N_ALGEBRAICS 1
+#endif
 #ifdef Shorten
 #define N_STATES 56
 #define N_ALGEBRAICS 71

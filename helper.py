@@ -114,6 +114,37 @@ if "hodgkin_huxley" in variables.cellml_file and "hodgkin_huxley-razumova" not i
   variables.nodal_stimulation_current = 40.                           # not used
   variables.vm_value_stimulated = 20.                                 # to which value of Vm the stimulated node should be set (option "valueForStimulatedPoint" of FastMonodomainSolver)
 
+elif "kolleg" in variables.cellml_file:
+  # Minimal mapping for simplified kolleg model
+  variables.muscle1_mappings = {
+    ("connectorSlot", 0): ("state", 0),         # Use the only available state
+  }
+  variables.parameters_initial_values = []                               # no parameters
+  variables.nodal_stimulation_current = 1200.                           # current amplitude for stimulation
+  variables.vm_value_stimulated = 40. 
+  
+# elif "kolleg" in variables.cellml_file:
+#   # Minimal mapping for kolleg model
+#   variables.muscle1_mappings = {
+#     ("parameter", 0):           ("algebraic", 0),     # Use algebraic index instead of name
+#     ("connectorSlot", 0): ("state", 0),         # Use state index instead of name
+#   }
+#   variables.parameters_initial_values = [0.0]                          # just stimulation current
+#   variables.nodal_stimulation_current = 1200.                         # current amplitude for stimulation
+#   variables.vm_value_stimulated = 40.                                 # membrane voltage value for stimulated nodes
+  
+# elif "kolleg" in variables.cellml_file:
+#   # parameters: stimulation current I_HH, fiber stretch λ
+#   variables.muscle1_mappings = {
+#     ("parameter", 0):           ("algebraic", "wal_environment/I_HH"), # stimulation current as algebraic variable
+#     ("parameter", 1):           ("constant", "razumova/L_x"),          # fiber stretch λ parameter
+#     ("connectorSlot", 0): ("state", "wal_environment/vS"),       # expose membrane voltage to operator splitting
+#   }
+#   variables.parameters_initial_values = [0.0, 1.0]                    # stimulation current I_HH=0, fiber stretch λ=1 (no stretch)
+#   variables.nodal_stimulation_current = 1200.                         # current amplitude for stimulation
+#   variables.vm_value_stimulated = 40.                                 # membrane voltage value for stimulated nodes
+
+
 elif "shorten" in variables.cellml_file:
   # parameters: stimulation current I_stim, fiber stretch λ
   variables.muscle1_mappings = {

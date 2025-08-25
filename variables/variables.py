@@ -73,7 +73,7 @@ muscle_material_parameters = [c1, c2, b, d]   # material parameters
 import os
 input_directory = os.path.join(os.environ.get('OPENDIHU_HOME', '../../../../../'), "examples/electrophysiology/input")
 
-cellml_file = input_directory+"/shorten_ocallaghan_davidson_soboleva_2007.cellml"
+cellml_file = input_directory+"/kolleg.cellml"
 fiber_distribution_file = input_directory+"/MU_fibre_distribution_multidomain_67x67_100.txt"
 firing_times_file = input_directory + "/MU_firing_times_real.txt"
 no_firing_times_file = input_directory + "/MU_firing_times_never.txt" # no firing

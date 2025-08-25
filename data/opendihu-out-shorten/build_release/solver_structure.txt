@@ -1,0 +1,94 @@
+The following data slot connection were given by the setting "connectedSlots":
+  m1gout ¤ ──> ¤ m1g_in
+
+Solver structure: 
+
+├── Control::PreciceAdapter                                                    
+│ ├── Coupling                                                                 
+│ │   ("everything")                                                           
+│ │  data slots:                                                               
+│ │  [a] solution.wal_environment/vS                 ├──────────────────── ¤0  x
+│ │  [a] solution                                    :├─────────────────── ¤1  x
+│ │  [a] computeStateInformation                     ::├────────────────── ¤2  x
+│ │  [a] additionalFieldVariable1                    :::├───────────────── ¤3  x
+│ │  [b] λ                                           ::::├────────── m1lda ¤4  x
+│ │  [b] λdot                                        :::::├──────── m1ldot ¤5  x
+│ │  [b] γ                                           ::::::├─────── m1g_in ¤6  x
+│ │  [b] T (material traction).x                     :::::::├───────── m1T ¤7  x
+│ │  [b] u.x                                         ::::::::├─────── m1ux ¤8  x
+│ │  [b] u.y                                         :::::::::├────── m1uy ¤9  x
+│ │  [b] u.z                                         ::::::::::├───── m1uz ¤10 x
+│ │                                                  :::::::::::               
+│ │ ├── FastMonodomainSolver                         :::::::::::               
+│ │ │   ("Term1")                                    :::::::::::               
+│ │ │ └── MultipleInstances                          :::::::::::               
+│ │ │ │ ├── StrangSplitting                          :::::::::::               
+│ │ │ │ │  data slots:                               :::::::::::               
+│ │ │ │ │  [a] solution.wal_environment/vS           ├÷÷÷÷÷÷÷÷÷÷────────── ¤0  x
+│ │ │ │ │  [a] solution                              :├÷÷÷÷÷÷÷÷÷────────── ¤1  x
+│ │ │ │ │  [a] additionalFieldVariable0              ::├÷÷÷÷÷÷÷÷────────── ¤2  x
+│ │ │ │ │  [a] additionalFieldVariable1              :::├÷÷÷÷÷÷÷────────── ¤3  x
+│ │ │ │ │                                            :::::::::::               
+│ │ │ │ │  slot connections:                         :::::::::::               
+│ │ │ │ │  0¤ <═> ¤0                                 :::::::::::               
+│ │ │ │ │                                            :::::::::::               
+│ │ │ │ │ ├── MultipleInstances                      :::::::::::               
+│ │ │ │ │ │   ("Term1")                              :::::::::::               
+│ │ │ │ │ │ ├── Heun                                 :::::::::::               
+│ │ │ │ │ │ │  data slots:                           :::::::::::               
+│ │ │ │ │ │ │  [a] solution.wal_environment/vS       ├÷÷÷÷÷÷÷÷÷÷────────── ¤0═══╗
+│ │ │ │ │ │ │                                         ::::::::::                ║
+│ │ │ │ │ │ │ └── CellmlAdapter                       ::::::::::                ║
+│ │ │ │ │ │ └                                         ::::::::::                ║
+│ │ │ │ │ └                                           ::::::::::                ║
+│ │ │ │ │                                             ::::::::::                ║
+│ │ │ │ │ └── MultipleInstances                       ::::::::::                ║
+│ │ │ │ │ │   ("Term2")                               ::::::::::                ║
+│ │ │ │ │ │ ├── ImplicitEuler                         ::::::::::                ║
+│ │ │ │ │ │ │  data slots:                            ::::::::::                ║
+│ │ │ │ │ │ │  [a] solution                           ├÷÷÷÷÷÷÷÷÷────────── ¤0═══╝
+│ │ │ │ │ │ │  [a] additionalFieldVariable0            ├÷÷÷÷÷÷÷÷────────── ¤1  x
+│ │ │ │ │ │ │  [a] additionalFieldVariable1             ├÷÷÷÷÷÷÷────────── ¤2  x
+│ │ │ │ │ │ │                                            :::::::               
+│ │ │ │ │ │ │ ├── FiniteElementMethod                    :::::::               
+│ │ │ │ │ │ │ │  data slots:                             :::::::               
+│ │ │ │ │ │ │ │  [a] solution                            :::::::           ¤0  x
+│ │ │ │ │ │ │ │                                          :::::::               
+│ │ │ │ │ │ └                                            :::::::               
+│ │ │ │ │ └                                              :::::::               
+│ │ │ │ └                                                :::::::               
+│ │ │ └                                                  :::::::               
+│ │ └                                                    :::::::               
+│ │                                                      :::::::               
+│ │ ├── MuscleContractionSolver                          :::::::               
+│ │ │   ("Term2")                                        :::::::               
+│ │ │  data slots:                                       :::::::               
+│ │ │  [b] λ                                             ├÷÷÷÷÷÷──── m1lda ¤0  x
+│ │ │  [b] λdot                                           ├÷÷÷÷÷─── m1ldot ¤1  x
+│ │ │  [b] γ                                               ├÷÷÷÷─── m1g_in ¤2  x
+│ │ │  [b] T (material traction).x                          ├÷÷÷────── m1T ¤3  x
+│ │ │  [b] u.x                                               ├÷÷───── m1ux ¤4  x
+│ │ │  [b] u.y                                                ├÷───── m1uy ¤5  x
+│ │ │  [b] u.z                                                 ├───── m1uz ¤6  x
+│ │ │                                                                          
+│ │ │ └── DynamicHyperelasticitySolver                                         
+│ │ │ │ ├── HyperelasticitySolver                                              
+│ │ │ │ │  data slots:                                                         
+│ │ │ │ │  [b] u.x                                                         ¤0  x
+│ │ │ │ │  [b] u.y                                                         ¤1  x
+│ │ │ │ │  [b] u.z                                                         ¤2  x
+│ │ │ │ │                                                                      
+│ │ │ └                                                                        
+│ │ └                                                                          
+│ └                                                                            
+└                                                                              
+                                                                               
+Connection Types:
+  +··+   Internal connection, no copy
+  ════   Reuse variable, no copy
+  ───>   Copy data in direction of arrow
+  ─m──   Mapping between different meshes
+
+Referenced Meshes:
+  [a] "muscle1_fiber0", 1D structured deformable, linear Lagrange basis
+  [b] "muscle1Mesh_quadratic", 3D structured deformable, quadratic Lagrange basis
